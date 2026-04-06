@@ -1,0 +1,49 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "LabFrame",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5",
+    "background": {
+      "dark": "#0f0e17"
+    }
+  },
+  "modeToggle": {
+    "default": "dark"
+  },
+  "topbarLinks": [
+    {
+      "name": "LabFrame",
+      "url": "https://labframe.ai"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://labframe.ai"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "features/agents",
+        "features/workspaces",
+        "features/webapps",
+        "features/collaboration",
+        "features/billing"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/bowu"
+  }
+}

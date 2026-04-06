@@ -1,0 +1,71 @@
+---
+title: Web Apps
+description: Agents can build and deploy static websites as .webapp artifacts, accessible at their own public URL.
+---
+
+# Web Apps
+
+When your agent builds a website, it packages the result as a `.webapp` artifact — a self-contained static site bundle that LabFrame can deploy to a public URL.
+
+## How it works
+
+1. You ask your agent to build a website
+2. The agent writes HTML, CSS, and JavaScript into the workspace
+3. The agent packages the output as `<name>.webapp`
+4. When you click the artifact, LabFrame deploys it and opens it in a new tab
+
+The deployed site is available at:
+
+```
+https://<slug>.labframe.ai/
+```
+
+For example, `https://csci-564.labframe.ai/` or `https://portfolio.labframe.ai/`.
+
+## Opening a web app
+
+There are three ways to open a deployed web app:
+
+- **Chat**: click the `.webapp` artifact link in a chat message
+- **Workspace single-click**: view metadata and click **Open App**
+- **Workspace double-click**: opens the site directly in a new tab
+
+If the site hasn't been deployed yet (or the content has changed), LabFrame deploys it automatically before opening.
+
+## What's inside a `.webapp`
+
+A `.webapp` file is a ZIP archive containing:
+
+```
+mysite.webapp
+  webapp.json        # manifest with title, slug, description
+  bundle/
+    index.html       # required entry point
+    assets/...       # CSS, JS, images, fonts
+```
+
+The bundle must be static — HTML, CSS, JavaScript, and assets only. No server-side code.
+
+## Slugs and URLs
+
+Each web app gets a **slug** — a short, human-readable identifier used in the public URL. Slugs are:
+
+- Globally unique across all deployed web apps
+- Automatically assigned from the manifest
+- Suffixed with `-2`, `-3`, etc. if the preferred slug is taken
+
+## Deploy behavior
+
+- **First open**: deploys the bundle and opens the site
+- **Unchanged content**: reuses the existing deployment (no re-upload)
+- **Updated content**: re-deploys with the new bundle
+- **Failed deploy**: shows an error in the workspace preview pane
+
+## Limits
+
+| Limit | Value |
+|-------|-------|
+| Max compressed `.webapp` size | 50 MB |
+| Max extracted bundle size | 100 MB |
+| Max single asset size | 10 MB |
+| Max files per app | 2,000 |
