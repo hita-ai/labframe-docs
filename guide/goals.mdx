@@ -1,0 +1,50 @@
+---
+title: Goal Mode
+description: Set a goal and let your agent work on it autonomously across multiple steps.
+---
+
+Goal mode lets you give your agent a longer-term objective. Instead of responding to a single message, the agent works through the goal autonomously — planning, executing, and iterating until it meets the acceptance criteria you define.
+
+## Setting a goal
+
+Click **Set goal** below the chat input. A form opens where you can define:
+
+| Field | Description |
+|-------|-------------|
+| **Goal** | What you want the agent to accomplish |
+| **Acceptance criteria** | How the agent should know it is done |
+| **Guidance** | Any constraints, preferences, or context the agent should follow |
+| **Output folder** | Where to save deliverables in the workspace |
+| **Files** | Optional files to upload as context for the goal |
+
+Fill in the fields and submit. The chat area shows a blue card confirming the goal is active.
+
+## While the goal is running
+
+The goal status card appears at the top of the chat and shows the current state:
+
+- **"Agent is working on this goal..."** — the agent is actively executing
+- **"Goal queued. First run starting..."** — the goal was just submitted
+- **"Goal active. Waiting for next run..."** — the agent finished one pass and is preparing the next
+
+You can still send regular messages while a goal is active. The agent handles both.
+
+## Editing or stopping
+
+From the goal status card:
+
+- Click **Edit goal** to modify the objective, criteria, or guidance
+- Click **Stop goal** to cancel the goal entirely
+
+Stopping a goal does not undo the files the agent already created — those remain in the workspace.
+
+## When to use goal mode
+
+Goal mode is best for tasks that require multiple rounds of work:
+
+- Writing a multi-section research paper
+- Building a complete application with iteration
+- Performing a literature review that requires searching, reading, and synthesizing
+- Generating a dataset with validation and cleanup steps
+
+For quick one-off tasks, a regular message is usually faster and simpler.

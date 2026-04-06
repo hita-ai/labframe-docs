@@ -1,0 +1,37 @@
+---
+title: Roles & Permissions
+description: What each access role can and cannot do.
+---
+
+LabFrame uses role-based access control for both agents and projects.
+
+## Agent roles
+
+When you share an agent, you assign a role:
+
+| Role | Send messages | View workspace | Create projects | Rename/delete agent | Manage access |
+|------|:-:|:-:|:-:|:-:|:-:|
+| **Owner** | Yes | Yes | Yes | Yes | Yes |
+| **Editor** | Yes | Yes | Yes | No | No |
+| **Viewer** | No | Yes | No | No | No |
+
+## Project roles
+
+When you share a project (conversation), collaborators get project-level access:
+
+| Role | Send messages | View conversation | View workspace files | Rename/delete project | Manage collaborators |
+|------|:-:|:-:|:-:|:-:|:-:|
+| **Owner** | Yes | Yes | Yes | Yes | Yes |
+| **Editor** | Yes | Yes | Yes | No | No |
+| **Viewer** | No | Yes | Yes | No | No |
+
+## How roles interact
+
+- An **agent editor** can send messages in any project they have access to and create new projects
+- A **project viewer** can read the conversation and browse workspace files, but cannot send messages
+- Only the **agent owner** can rename the agent, delete it, or manage agent-level sharing
+- Only the **project owner** (or someone who created it) can delete a project
+
+## Guest collaborators
+
+When someone from a different organization is invited, they join as a **guest** in your org context for that specific project. Their guest access is limited to the shared project — they cannot see your other agents, billing, or settings.

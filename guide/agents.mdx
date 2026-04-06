@@ -1,0 +1,67 @@
+---
+title: Agents
+description: Each agent is a persistent AI assistant with its own cloud workspace, tools, and memory.
+---
+
+An agent in LabFrame is not a stateless chatbot. Each agent has:
+
+- A **persistent cloud workspace** — a full Linux VM with files, packages, and tools
+- **Conversation history** across multiple projects
+- A **configurable system prompt** that shapes its behavior
+- **Model selection** — choose which AI model powers it
+
+## Creating an agent
+
+Click **+ New Agent** in the sidebar. You will see a modal with two fields:
+
+| Field | Description |
+|-------|-------------|
+| **Agent name** | A display name (e.g., "Research Assistant", "CSCI 564 Helper") |
+| **Machine type** | The VM profile for the agent's workspace |
+
+After you click **Create**, LabFrame provisions a dedicated cloud VM. The sidebar shows status updates while the VM starts. When the green dot appears, the agent is ready.
+
+## Projects
+
+Each agent can have multiple **projects** — separate conversations, each with its own chat history and optional workspace scope.
+
+To create a new project, click the **+** icon next to the agent name in the sidebar. You can give the project a name, optionally upload starter files, and invite collaborators.
+
+Projects keep different tasks organized. A single "Research Assistant" agent might have one project for a literature review and another for data analysis, each with their own conversation thread.
+
+## Renaming and deleting
+
+Hover over an agent in the sidebar and click the **three-dot menu** to rename or delete it. Only the agent owner can rename. Deleting an agent also deletes its workspace and all projects.
+
+You can also rename projects from the same three-dot menu on each project entry.
+
+## System prompts
+
+The system prompt tells the agent how to behave. You can set it when creating the agent or edit it later. For example:
+
+> You are a research assistant for a materials science lab. When asked to review a paper, produce a structured summary with sections for methodology, key findings, limitations, and relevance to our lithium-ion battery degradation project.
+
+Agents with clear, specific system prompts produce better results.
+
+## Models
+
+Use the model picker at the bottom of the chat input to switch models. Available options include:
+
+- **Opus 4.6** — most capable, best for complex multi-step tasks
+- **Sonnet 4.6** — fast and capable, good for most tasks
+- **GPT 5.4** — OpenAI model, strong at coding and structured output
+
+You can switch models between messages. The agent keeps the same workspace and conversation regardless of which model you use.
+
+## Agent states
+
+The colored dot next to the agent name in the sidebar indicates its current state:
+
+| Indicator | Meaning |
+|-----------|---------|
+| Green dot | Sandbox ready — the agent can respond immediately |
+| Yellow dot | Sandbox starting — the VM is booting |
+| Gray dot | Agent asleep — the VM is suspended to save resources |
+| Red dot | Sandbox error — something went wrong with the VM |
+
+If your agent is asleep, it wakes automatically when you send a message. You can also click **Wake Agent** in the chat area to wake it manually.

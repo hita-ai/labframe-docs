@@ -1,0 +1,58 @@
+---
+title: Workspace
+description: Browse, preview, upload, and download files in your agent's cloud workspace.
+---
+
+Every agent has a persistent workspace — a real filesystem on a cloud VM. Files your agent creates are stored here and persist across conversations.
+
+Switch to the **Workspace** tab in any agent view to open the file browser.
+
+## Browsing files
+
+The file tree shows folders and files in a collapsible hierarchy. Click a folder to expand it. Certain directories are hidden by default (`.venv`, `node_modules`, and other system directories) to keep the view clean.
+
+Each file shows its name, size, and a type badge for recognized formats.
+
+## Previewing files
+
+**Single-click** a file to preview it in the right pane. LabFrame renders inline previews for many file types:
+
+| File type | Preview |
+|-----------|---------|
+| Code (`.py`, `.ts`, `.js`, `.rs`, etc.) | Syntax-highlighted source with line numbers |
+| Markdown (`.md`) | Rendered markdown |
+| HTML (`.html`) | Source code view |
+| PDF (`.pdf`) | Embedded PDF viewer with zoom controls |
+| Images (`.png`, `.jpg`, `.svg`, `.gif`, `.webp`) | Inline image display |
+| Documents (`.docx`) | Rendered document |
+| Spreadsheets (`.xlsx`) | Table view |
+| Presentations (`.pptx`) | Slide preview |
+| Web apps (`.webapp`) | Metadata card with **Open App** and **Copy URL** buttons |
+
+For files without a special preview, LabFrame shows the raw text content.
+
+## Uploading files
+
+Click the **upload button** in the workspace toolbar (or drag files into the file browser) to upload files into the agent's workspace. Your agent can then read and use these files in future messages.
+
+When creating a new project, you can also attach starter files that are uploaded into the project's `upload/` folder.
+
+## Downloading files
+
+Click the **download button** on any file to download it to your computer.
+
+## Creating folders
+
+Use the **new folder** action to create directories in the workspace.
+
+## Deleting and moving files
+
+Right-click or use the action menu on any file to delete or move it. Deleting a file is permanent. You can also drag and drop files between folders.
+
+## Workspace scope
+
+When you create a project, the agent can scope its work to a project-specific subdirectory. This keeps different projects organized within the same agent workspace.
+
+## Agent must be awake
+
+The workspace requires the agent's VM to be running. If the agent is asleep, you will see a message prompting you to **Wake** the agent before browsing files.

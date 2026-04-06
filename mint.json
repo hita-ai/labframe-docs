@@ -33,17 +33,32 @@
       "pages": ["introduction", "quickstart"]
     },
     {
-      "group": "Features",
+      "group": "Using LabFrame",
       "pages": [
-        "features/agents",
-        "features/workspaces",
-        "features/webapps",
-        "features/collaboration",
-        "features/billing"
+        "guide/agents",
+        "guide/chat",
+        "guide/goals",
+        "guide/workspace",
+        "guide/webapps",
+        "guide/skills"
+      ]
+    },
+    {
+      "group": "Collaboration",
+      "pages": [
+        "collaboration/sharing",
+        "collaboration/roles"
+      ]
+    },
+    {
+      "group": "Account",
+      "pages": [
+        "account/billing",
+        "account/settings"
       ]
     }
   ],
   "footerSocials": {
-    "github": "https://github.com/bowu"
+    "github": "https://github.com/hita-ai"
   }
 }

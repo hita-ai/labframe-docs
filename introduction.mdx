@@ -1,43 +1,56 @@
 ---
-title: Introduction
-description: LabFrame is a university AI agent platform where every student, researcher, and instructor gets a personal AI agent with its own cloud workspace.
+title: What is LabFrame?
+description: Persistent AI agents with dedicated workspaces, tools, and memory for research teams.
 ---
 
-# Welcome to LabFrame
+LabFrame gives you persistent AI agents that do real work. Each agent has a dedicated cloud workspace where it can write code, run commands, search the web, generate documents, and build websites — then hand you the finished deliverable.
 
-LabFrame gives every user a personal AI agent backed by a full cloud development environment. Your agent can write code, generate documents, build websites, analyze data, and produce real deliverables — not just chat responses.
+It is not a chatbot. It is an AI teammate with its own computer.
 
-## What makes LabFrame different
+## Who is it for?
+
+LabFrame is built for R&D teams, university labs, and national labs. Researchers, students, and instructors use it to accelerate work that used to take weeks — literature reviews, data analysis, course material, prototypes, and technical writing.
+
+## Core ideas
 
 <CardGroup cols={2}>
-  <Card title="Real workspaces" icon="folder-open">
-    Every agent has a persistent cloud workspace with files, tools, and a full Linux environment. Your agent writes real code into real files.
+  <Card title="Persistent agents" icon="robot">
+    Each agent keeps its files, conversation history, and workspace across sessions. Pick up where you left off.
   </Card>
-  <Card title="Deployable artifacts" icon="rocket">
-    Agents produce deliverables you can use — PDFs, slides, datasets, and static websites deployed to their own URL.
+  <Card title="Real workspace" icon="folder-open">
+    A full Linux cloud environment, not a sandbox toy. Your agent installs packages, writes files, and runs real commands.
   </Card>
-  <Card title="Collaborative sessions" icon="users">
-    Share a conversation with collaborators. Everyone sees the same agent, the same workspace, and the same results.
+  <Card title="Deliverables, not just text" icon="file-export">
+    PDFs, spreadsheets, slide decks, datasets, and deployed websites. Things you can actually send to your advisor or your team.
   </Card>
-  <Card title="Built for education" icon="graduation-cap">
-    Designed for university courses, research labs, and student projects. Instructors can provision agents for entire classes.
+  <Card title="Collaboration" icon="users">
+    Invite collaborators to a shared conversation. Everyone sees the same agent, workspace, and results in real time.
   </Card>
 </CardGroup>
 
-## How it works
+## How a typical session looks
 
-1. **Create an agent** — each agent gets its own name, icon, system prompt, and cloud workspace.
-2. **Chat with your agent** — ask it to build something. It writes code, runs commands, and produces files in its workspace.
-3. **Open your deliverables** — click a generated `.webapp` to open a deployed website, download a PDF, or browse workspace files.
-4. **Collaborate** — invite others to a shared conversation. They see the same workspace and can send their own messages.
+1. You create an agent and give it a name.
+2. You send a message: *"Build a literature review on battery degradation models."*
+3. The agent searches the web, reads papers, writes a LaTeX document, compiles it to PDF, and presents you with the file.
+4. You click the PDF link in chat to preview it, or open the workspace to download it.
+5. You send a follow-up: *"Add a comparison table and regenerate."* The agent iterates on the same files.
+
+Everything the agent produces lives in its workspace. Nothing disappears when the conversation ends.
 
 ## Next steps
 
 <CardGroup cols={2}>
   <Card title="Quickstart" icon="play" href="/quickstart">
-    Create your first agent and send your first message.
+    Create your first agent and get a deliverable in under two minutes.
   </Card>
-  <Card title="Agents" icon="robot" href="/features/agents">
-    Learn how agents work, how to configure them, and what they can do.
+  <Card title="Agents" icon="robot" href="/guide/agents">
+    Learn how to create and configure agents.
+  </Card>
+  <Card title="Chat" icon="message" href="/guide/chat">
+    How to talk to your agent and get the most out of it.
+  </Card>
+  <Card title="Workspace" icon="folder-open" href="/guide/workspace">
+    Browse, preview, and manage the files your agent creates.
   </Card>
 </CardGroup>

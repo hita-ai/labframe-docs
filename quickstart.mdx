@@ -3,53 +3,68 @@ title: Quickstart
 description: Create your first agent and get a working deliverable in under two minutes.
 ---
 
-# Quickstart
+## Sign in
 
-This guide walks you through creating an agent, sending a message, and opening a deliverable.
+Go to [labframe.ai](https://labframe.ai) and click **Get started**. Enter your email address — LabFrame will send you a magic link. Click the link in your inbox and you are signed in. No password needed.
 
-## Step 1: Sign in
+<Info>If your organization uses SSO, you may be redirected to your university or company login page instead.</Info>
 
-Go to [labframe.ai](https://labframe.ai) and sign in with your university email. LabFrame uses magic-link authentication — check your inbox for the sign-in link.
+## Create an agent
 
-## Step 2: Create an agent
+Click **+ New Agent** in the sidebar. Enter a name — something like "Research Assistant" or "Course Helper" — and select a machine type. Click **Create**.
 
-Click **New Agent** in the sidebar. Give your agent a name and optionally customize its icon and system prompt. The agent starts with a fresh cloud workspace.
+LabFrame provisions a cloud VM for your agent. You will see status messages while it starts up:
 
-## Step 3: Send a message
+- *Creating VM...*
+- *Starting sandbox...*
 
-Type a request in the chat input. For example:
+Once the green dot appears next to your agent's name in the sidebar, the agent is ready.
 
-> Build me a landing page for a student portfolio site.
+## Send your first message
 
-Your agent will:
-- Think through the approach
-- Write HTML, CSS, and JavaScript files into the workspace
-- Package the result as a `.webapp` artifact
-- Present the finished deliverable in chat
+Type a request in the chat input at the bottom of the screen. For example:
 
-## Step 4: Open your deliverable
+> Build me a one-page portfolio site with a dark theme.
 
-Click the `.webapp` artifact link in chat. LabFrame deploys the static site and opens it in a new tab at a URL like `https://portfolio.labframe.ai/`.
+Press **Enter** (or click the send button) to submit.
 
-You can also find the artifact in the **Workspace** tab and single-click it to see metadata, or double-click to open it directly.
+Your agent will start working. You will see:
 
-## Step 5: Iterate
+- A **thinking** indicator while the agent plans its approach
+- **Tool activity** summaries as it writes files, runs commands, or searches the web (collapsed by default — click to expand)
+- The **final response** with text and file links
 
-Send follow-up messages to refine the result. Your agent remembers the full conversation and has access to all the files it already created.
+## Open a deliverable
+
+If your agent produced a file, it appears as a clickable link in the chat message — a small pill-shaped badge with the file name.
+
+- **Click a `.webapp` link** to open a deployed website in a new tab
+- **Click a `.pdf` link** to preview the PDF inline
+- **Click any other file** to open it in the workspace file preview
+
+You can also switch to the **Workspace** tab at any time to browse all the files your agent has created.
+
+## Keep iterating
+
+Send follow-up messages to refine the result. Your agent remembers the entire conversation and has access to all the files it already created.
+
+> Make the hero section larger and add a contact form.
+
+The agent edits the existing files and rebuilds.
 
 ## What's next
 
 <CardGroup cols={2}>
-  <Card title="Agents" icon="robot" href="/features/agents">
-    Configure system prompts, models, and agent behavior.
+  <Card title="Chat" icon="message" href="/guide/chat">
+    Model selection, goal mode, and how messages work.
   </Card>
-  <Card title="Web Apps" icon="globe" href="/features/webapps">
-    Learn how `.webapp` artifacts work and how they're deployed.
+  <Card title="Workspace" icon="folder-open" href="/guide/workspace">
+    File browsing, previews, uploads, and downloads.
   </Card>
-  <Card title="Workspaces" icon="folder-open" href="/features/workspaces">
-    Browse, download, and manage files in your agent's workspace.
+  <Card title="Web Apps" icon="globe" href="/guide/webapps">
+    How agents build and deploy static websites.
   </Card>
-  <Card title="Collaboration" icon="users" href="/features/collaboration">
-    Share conversations and invite collaborators.
+  <Card title="Collaboration" icon="users" href="/collaboration/sharing">
+    Invite others to work with your agent.
   </Card>
 </CardGroup>

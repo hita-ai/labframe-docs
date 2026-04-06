@@ -1,0 +1,76 @@
+---
+title: Web Apps
+description: Your agent can build static websites and deploy them to a public URL you can share with anyone.
+---
+
+When you ask your agent to build a website, it packages the result as a `.webapp` artifact — a self-contained static site that LabFrame deploys to a public URL.
+
+## How it works
+
+1. You ask: *"Build a course homepage for CSCI 564"*
+2. The agent writes HTML, CSS, and JavaScript into the workspace
+3. The agent packages the output as `csci-564.webapp`
+4. You click the artifact in chat — LabFrame deploys it and opens it in a new tab
+
+The deployed site is available at a URL like:
+
+```
+https://csci-564.labframe.ai/
+```
+
+Anyone with the link can view the site. No LabFrame account required.
+
+## Opening a web app
+
+There are three ways to open a deployed web app:
+
+| Action | Where |
+|--------|-------|
+| **Click the `.webapp` link** in a chat message | Chat |
+| **Single-click** the `.webapp` file, then click **Open App** | Workspace |
+| **Double-click** the `.webapp` file | Workspace |
+
+If the site hasn't been deployed yet (or the content changed since the last deploy), LabFrame deploys it automatically before opening. You will see a brief loading page while this happens.
+
+## Workspace preview
+
+Single-clicking a `.webapp` file in the workspace shows a card with:
+
+- The app's **title** and **description** (from the manifest)
+- An **Open App** button to open the deployed site in a new tab
+- A **Copy URL** button to copy the public URL to your clipboard
+
+## Updating a web app
+
+Send a follow-up message to change the site:
+
+> Add a dark mode toggle to the course homepage.
+
+The agent edits the source files, repackages the `.webapp`, and the next time you open it, LabFrame deploys the updated version.
+
+## Slugs
+
+Each web app gets a **slug** — the subdomain in the URL. The slug comes from the app's manifest and is globally unique. If your preferred slug is already taken, LabFrame appends a suffix like `-2` or `-3`.
+
+## What's inside a `.webapp`
+
+A `.webapp` file is a ZIP archive containing a manifest and a static bundle:
+
+```
+csci-564.webapp
+  webapp.json          # title, slug, description, entry point
+  bundle/
+    index.html         # required
+    assets/...         # CSS, JS, images, fonts
+```
+
+Static content only — no server-side code.
+
+## Limits
+
+| Limit | Value |
+|-------|-------|
+| Compressed `.webapp` size | 50 MB |
+| Extracted bundle size | 100 MB |
+| Single asset | 10 MB |
+| Files per app | 2,000 |
