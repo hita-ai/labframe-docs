@@ -1,14 +1,14 @@
 ---
 title: Agents
-description: Each agent is a persistent AI assistant with its own cloud workspace, tools, and memory.
+description: Each agent is an AI researcher with its own dedicated computer — an isolated cloud VM with persistent files, tools, and memory.
 ---
 
-An agent in LabFrame is not a stateless chatbot. Each agent has:
+An agent in LabFrame is not a stateless chatbot. It is an AI researcher with its own dedicated computer. Each agent has:
 
-- A **persistent cloud workspace** — a full Linux VM with files, packages, and tools
-- **Conversation history** across multiple projects
-- A **configurable system prompt** that shapes its behavior
-- **Model selection** — choose which AI model powers it
+- A **dedicated cloud VM** — an isolated Linux machine with its own filesystem, shell, and installed packages
+- **Persistent storage** — files survive across sessions; nothing resets when the conversation ends
+- **Autonomous execution** — the agent can search the web, write code, run commands, and produce deliverables on its own machine
+- **Configurable behavior** — system prompts and model selection shape how the agent works
 
 ## Creating an agent
 
@@ -17,9 +17,15 @@ Click **+ New Agent** in the sidebar. You will see a modal with two fields:
 | Field | Description |
 |-------|-------------|
 | **Agent name** | A display name (e.g., "Research Assistant", "CSCI 564 Helper") |
-| **Machine type** | The VM profile for the agent's workspace |
+| **Machine type** | The VM profile — choose based on how much compute your agent needs |
 
-After you click **Create**, LabFrame provisions a dedicated cloud VM. The sidebar shows status updates while the VM starts. When the green dot appears, the agent is ready.
+After you click **Create**, LabFrame provisions a dedicated cloud VM. The sidebar shows status updates while the machine starts. When the green dot appears, the agent's computer is ready and the agent can start working.
+
+## Machine types
+
+Each agent's computer has a specific hardware profile. Click the **CPU icon** in the header to open the machine type selector. Options range from lightweight VMs (2 vCPUs, 4 GiB) to GPU machines (A100s) for heavy workloads.
+
+Changing the machine type restarts the agent's VM. Files on the persistent workspace disk are preserved.
 
 ## Projects
 
@@ -27,13 +33,7 @@ Each agent can have multiple **projects** — separate conversations, each with 
 
 To create a new project, click the **+** icon next to the agent name in the sidebar. You can give the project a name, optionally upload starter files, and invite collaborators.
 
-Projects keep different tasks organized. A single "Research Assistant" agent might have one project for a literature review and another for data analysis, each with their own conversation thread.
-
-## Renaming and deleting
-
-Hover over an agent in the sidebar and click the **three-dot menu** to rename or delete it. Only the agent owner can rename. Deleting an agent also deletes its workspace and all projects.
-
-You can also rename projects from the same three-dot menu on each project entry.
+Projects keep different tasks organized. A single "Research Assistant" agent might have one project for a literature review and another for data analysis, each with their own conversation thread — but sharing the same underlying computer and workspace.
 
 ## System prompts
 
@@ -41,27 +41,25 @@ The system prompt tells the agent how to behave. You can set it when creating th
 
 > You are a research assistant for a materials science lab. When asked to review a paper, produce a structured summary with sections for methodology, key findings, limitations, and relevance to our lithium-ion battery degradation project.
 
-Agents with clear, specific system prompts produce better results.
+Agents with clear, specific system prompts produce better results. Think of the system prompt as the agent's job description.
 
 ## Models
 
-Use the model picker at the bottom of the chat input to switch models. Available options include:
+Use the model picker at the bottom of the chat input to switch models:
 
-- **Opus 4.6** — most capable, best for complex multi-step tasks
+- **Opus 4.6** — most capable, best for complex multi-step research tasks
 - **Sonnet 4.6** — fast and capable, good for most tasks
 - **GPT 5.4** — OpenAI model, strong at coding and structured output
 
-You can switch models between messages. The agent keeps the same workspace and conversation regardless of which model you use.
+You can switch models between messages. The agent keeps the same computer, workspace, and conversation regardless of which model powers it.
 
 ## Agent states
 
-The colored dot next to the agent name in the sidebar indicates its current state:
-
 | Indicator | Meaning |
 |-----------|---------|
-| Green dot | VM ready — the agent can respond immediately |
-| Yellow dot | VM starting — the agent's machine is booting |
+| Green dot | VM ready — the agent's computer is running and it can respond immediately |
+| Yellow dot | VM starting — the machine is booting up |
 | Gray dot | Agent asleep — the VM is suspended to save resources |
 | Red dot | VM error — something went wrong with the agent's machine |
 
-If your agent is asleep, it wakes automatically when you send a message. You can also click **Wake Agent** in the chat area to wake it manually.
+If your agent is asleep, it wakes automatically when you send a message. You can also put a running agent to sleep using the **Moon icon** in the header to save credits when you're not using it.

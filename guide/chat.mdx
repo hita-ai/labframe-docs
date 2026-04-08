@@ -1,9 +1,9 @@
 ---
 title: Chat
-description: How to communicate with your agent — sending messages, reading responses, and understanding tool activity.
+description: How to communicate with your agent — sending messages, watching it work on its computer, and opening the results.
 ---
 
-The chat interface is where you interact with your agent. You send messages, the agent works, and you see the results.
+The chat interface is where you interact with your agent. You send messages, the agent works on its dedicated computer, and you see the results.
 
 ## Sending messages
 
@@ -21,15 +21,17 @@ Agent responses appear on the left side. A response typically has two parts:
 
 ### Tool activity
 
-A collapsible summary shows what the agent did behind the scenes. It looks like:
+A collapsible summary shows what the agent did on its computer. It looks like:
 
 > Searched the web, read 3 files, wrote output.json
 
-Click the summary to expand and see each individual tool call with its result. Tool calls include things like:
+Click the summary to expand and see each individual action with its result:
 
-- **Read file** / **Wrote file** — file operations in the workspace
-- **Ran command** — shell commands the agent executed
+- **Read file** / **Wrote file** — file operations on the agent's machine
+- **Ran command** — shell commands the agent executed on its VM
 - **Searched the web** — web research the agent performed
+
+This is a window into the agent's work — the same kind of work a human researcher would do on their laptop.
 
 ### Text response
 
@@ -43,21 +45,21 @@ Below the activity summary, the agent's written response is rendered as formatte
 
 ## File links
 
-When the agent references a file it created, the file appears as a small clickable badge in the response text. Click it to:
+When the agent references a file it created on its computer, the file appears as a small clickable badge in the response text. Click it to:
 
 - **Preview the file** in a side panel (code, PDF, images, markdown)
 - **Open a `.webapp`** in a new browser tab as a deployed website
 
 ## Model picker
 
-The dropdown at the bottom-right of the chat input lets you switch AI models. Choose from options like **opus 4.6**, **sonnet 4.6**, or **gpt 5.4**. You can change models between messages — the conversation and workspace carry over.
+The dropdown at the bottom-right of the chat input lets you switch AI models. Choose from options like **opus 4.6**, **sonnet 4.6**, or **gpt 5.4**. You can change models between messages — the agent keeps the same computer and workspace regardless of which model powers it.
 
 ## Stopping a response
 
-While the agent is responding, the send button changes to a red **stop** button. Click it to interrupt the current response. The agent keeps any files it already created.
+While the agent is responding, the send button changes to a red **stop** button. Click it to interrupt the current response. The agent keeps any files it already created on its machine.
 
 ## Shared conversations
 
-In shared conversations, messages from other collaborators appear with their name and avatar. Your own messages are always labeled **"You"**.
+In shared conversations, messages from other collaborators appear with their name and avatar. Your own messages are always labeled **"You"**. Everyone shares the same agent computer and workspace.
 
 Viewers in a shared conversation see a read-only input that says *"Read-only: viewers can follow shared conversations but cannot send messages."*

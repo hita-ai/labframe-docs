@@ -1,42 +1,42 @@
 ---
 title: What is LabFrame?
-description: Persistent AI agents with dedicated workspaces, tools, and memory for research teams.
+description: LabFrame gives every user an AI researcher with its own dedicated computer — a real VM that searches, codes, writes, and delivers finished work.
 ---
 
-LabFrame gives you persistent AI agents that do real work. Each agent has a dedicated cloud workspace where it can write code, run commands, search the web, generate documents, and build websites — then hand you the finished deliverable.
+LabFrame is an agentic AI platform for research teams. Each agent is an AI researcher that owns a dedicated computer — an isolated cloud VM with its own filesystem, installed packages, shell, and tools. You describe what you need, and the agent works autonomously: searching the web, writing code, generating documents, building websites, and delivering finished artifacts.
 
-It is not a chatbot. It is an AI teammate with its own computer.
+It is not a chatbot. It is an AI researcher with its own machine.
 
 ## Who is it for?
 
-LabFrame is built for R&D teams, university labs, and national labs. Researchers, students, and instructors use it to accelerate work that used to take weeks — literature reviews, data analysis, course material, prototypes, and technical writing.
+LabFrame is built for R&D teams, university labs, and national labs — anyone whose work involves literature reviews, data analysis, technical writing, course material, or building prototypes. Instead of doing the tedious parts yourself, you delegate them to an AI agent that works on a real computer and hands you the finished result.
 
 ## Core ideas
 
 <CardGroup cols={2}>
-  <Card title="Persistent agents" icon="robot">
-    Each agent keeps its files, conversation history, and workspace across sessions. Pick up where you left off.
+  <Card title="Dedicated computer per agent" icon="server">
+    Each agent gets its own isolated cloud VM with a full Linux environment. Files, packages, and state persist across sessions — nothing resets when the conversation ends.
   </Card>
-  <Card title="Real workspace" icon="folder-open">
-    A full Linux cloud environment. Your agent installs packages, writes files, and runs real commands.
+  <Card title="Automated research" icon="microscope">
+    Set a goal with acceptance criteria and the agent works autonomously — searching, reading, analyzing, and writing until the job is done. Check back when it's finished.
   </Card>
-  <Card title="Deliverables, not just text" icon="file-export">
-    PDFs, spreadsheets, slide decks, datasets, and deployed websites. Things you can actually send to your advisor or your team.
+  <Card title="Real deliverables" icon="file-export">
+    PDFs, datasets, spreadsheets, slide decks, deployed websites. Artifacts you can download, share, and use — not just text in a chat window.
   </Card>
-  <Card title="Collaboration" icon="users">
-    Invite collaborators to a shared conversation. Everyone sees the same agent, workspace, and results in real time.
+  <Card title="Team collaboration" icon="users">
+    Invite collaborators into the same agent and project. Everyone shares the same computer, conversation, and results in real time.
   </Card>
 </CardGroup>
 
-## How a typical session looks
+## How it works
 
-1. You create an agent and give it a name.
-2. You send a message: *"Build a literature review on battery degradation models."*
-3. The agent searches the web, reads papers, writes a LaTeX document, compiles it to PDF, and presents you with the file.
-4. You click the PDF link in chat to preview it, or open the workspace to download it.
-5. You send a follow-up: *"Add a comparison table and regenerate."* The agent iterates on the same files.
+1. You create an agent. LabFrame provisions a dedicated cloud VM for it.
+2. You describe what you need: *"Build a literature review on battery degradation models with a comparison table."*
+3. The agent works on its own computer — searching the web, reading papers, writing LaTeX, compiling to PDF — and presents you with the finished file.
+4. You click the file link in chat to preview it, or open the agent's workspace to browse everything it created.
+5. You send a follow-up: *"Add a section on solid-state electrolytes and regenerate."* The agent iterates on the same files in the same workspace.
 
-Everything the agent produces lives in its workspace. Nothing disappears when the conversation ends.
+For larger tasks, use **Goal Mode** to define acceptance criteria and let the agent run autonomously across multiple steps. It plans, executes, checks its work, and iterates until the goal is met — all on its own machine, without you watching.
 
 ## Next steps
 
@@ -45,12 +45,12 @@ Everything the agent produces lives in its workspace. Nothing disappears when th
     Create your first agent and get a deliverable in under two minutes.
   </Card>
   <Card title="Agents" icon="robot" href="/guide/agents">
-    Learn how to create and configure agents.
+    How agents work — dedicated VMs, system prompts, and models.
   </Card>
-  <Card title="Chat" icon="message" href="/guide/chat">
-    How to talk to your agent and get the most out of it.
+  <Card title="Goal Mode" icon="bullseye" href="/guide/goals">
+    Delegate complex research tasks and let the agent work autonomously.
   </Card>
   <Card title="Workspace" icon="folder-open" href="/guide/workspace">
-    Browse, preview, and manage the files your agent creates.
+    Browse, preview, and manage the files on your agent's computer.
   </Card>
 </CardGroup>

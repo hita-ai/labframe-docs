@@ -1,6 +1,6 @@
 ---
 title: Quickstart
-description: Create your first agent and get a working deliverable in under two minutes.
+description: Create an AI agent with its own computer and get a finished deliverable in under two minutes.
 ---
 
 ## Sign in
@@ -13,56 +13,57 @@ Go to [labframe.ai](https://labframe.ai) and click **Get started**. Enter your e
 
 Click **+ New Agent** in the sidebar. Enter a name — something like "Research Assistant" or "Course Helper" — and select a machine type. Click **Create**.
 
-LabFrame provisions a cloud VM for your agent. You will see status messages while it starts up:
+LabFrame provisions a dedicated cloud VM for your agent. You will see status messages while the machine starts up:
 
 - *Creating VM...*
 - *Starting VM...*
 
-Once the green dot appears next to your agent's name in the sidebar, the agent is ready.
+Once the agent appears in the sidebar, it is ready. It now has its own computer with a full Linux environment, persistent filesystem, and installed tools.
 
 ## Send your first message
 
 Type a request in the chat input at the bottom of the screen. For example:
 
-> Build me a one-page portfolio site with a dark theme.
+> Survey the top 5 recent papers on transformer efficiency and write a one-page summary as a PDF.
 
-Press **Enter** (or click the send button) to submit.
-
-Your agent will start working. You will see:
+Press **Enter** to submit. Your agent starts working on its own machine:
 
 - A **thinking** indicator while the agent plans its approach
-- **Tool activity** summaries as it writes files, runs commands, or searches the web (collapsed by default — click to expand)
+- **Tool activity** summaries as it searches the web, writes files, runs commands (collapsed by default — click to expand)
 - The **final response** with text and file links
+
+The agent does everything on its dedicated computer — the same way a human researcher would work on their laptop, except it does it in minutes.
 
 ## Open a deliverable
 
-If your agent produced a file, it appears as a clickable link in the chat message — a small pill-shaped badge with the file name.
+When the agent produces a file, it appears as a clickable link in the chat message.
 
 - **Click a `.webapp` link** to open a deployed website in a new tab
 - **Click a `.pdf` link** to preview the PDF inline
 - **Click any other file** to open it in the workspace file preview
 
-You can also switch to the **Workspace** tab at any time to browse all the files your agent has created.
+Switch to the **Workspace** tab to browse everything the agent has created on its computer — source files, build output, data, and deliverables.
 
-## Keep iterating
+## Automate a larger task
 
-Send follow-up messages to refine the result. Your agent remembers the entire conversation and has access to all the files it already created.
+For work that takes multiple steps, use **Goal Mode**. Click **Set goal** below the chat input, describe the objective and acceptance criteria, and let the agent run autonomously. It plans, executes, and iterates on its own computer until the goal is met.
 
-> Make the hero section larger and add a contact form.
+> **Goal:** Produce a comparative analysis of 3 battery degradation models.
+> **Acceptance criteria:** PDF report with methodology comparison table, at least 10 cited sources, and a recommendations section.
 
-The agent edits the existing files and rebuilds.
+The agent works in the background. Check back when it's done — all the files will be in the workspace.
 
 ## What's next
 
 <CardGroup cols={2}>
-  <Card title="Chat" icon="message" href="/guide/chat">
-    Model selection, goal mode, and how messages work.
+  <Card title="Agents" icon="robot" href="/guide/agents">
+    Dedicated VMs, system prompts, models, and agent states.
   </Card>
-  <Card title="Workspace" icon="folder-open" href="/guide/workspace">
-    File browsing, previews, uploads, and downloads.
+  <Card title="Goal Mode" icon="bullseye" href="/guide/goals">
+    Delegate complex tasks and let the agent work autonomously.
   </Card>
   <Card title="Web Apps" icon="globe" href="/guide/webapps">
-    How agents build and deploy static websites.
+    How agents build and deploy websites on their own machines.
   </Card>
   <Card title="Collaboration" icon="users" href="/collaboration/sharing">
     Invite others to work with your agent.

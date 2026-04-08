@@ -1,9 +1,11 @@
 ---
 title: Goal Mode
-description: Set a goal and let your agent work on it autonomously across multiple steps.
+description: Delegate complex research tasks to your agent and let it work autonomously on its own computer until the job is done.
 ---
 
-Goal mode lets you give your agent a longer-term objective. Instead of responding to a single message, the agent works through the goal autonomously — planning, executing, and iterating until it meets the acceptance criteria you define.
+Goal mode is how you automate research. Instead of going back and forth with individual messages, you define an objective with acceptance criteria and let the agent work autonomously on its dedicated computer — planning, executing, and iterating until the job is done.
+
+Set a goal, walk away, and come back to finished deliverables.
 
 ## Setting a goal
 
@@ -19,15 +21,27 @@ Click **Set goal** below the chat input. A form opens where you can define:
 
 Fill in the fields and submit. The chat area shows a blue card confirming the goal is active.
 
+### Example
+
+> **Goal:** Produce a comparative analysis of federated learning approaches for medical imaging.
+>
+> **Acceptance criteria:** A PDF report with at least 15 cited sources, a methodology comparison table, a limitations section, and a one-paragraph recommendation for our lab's use case.
+>
+> **Guidance:** Focus on papers from 2023-2026. Prioritize approaches that work with small institutional datasets. Use LaTeX with the IEEE template.
+
+The agent will search for papers, read and extract relevant information, organize findings, write the LaTeX document, compile it, review the output for quality, and iterate until the acceptance criteria are met — all on its own computer.
+
 ## While the goal is running
 
 The goal status card appears at the top of the chat and shows the current state:
 
-- **"Agent is working on this goal..."** — the agent is actively executing
+- **"Agent is working on this goal..."** — the agent is actively executing on its machine
 - **"Goal queued. First run starting..."** — the goal was just submitted
 - **"Goal active. Waiting for next run..."** — the agent finished one pass and is preparing the next
 
 You can still send regular messages while a goal is active. The agent handles both.
+
+All work happens on the agent's dedicated computer. You can switch to the **Workspace** tab at any time to watch files appear as the agent works.
 
 ## Editing or stopping
 
@@ -36,15 +50,28 @@ From the goal status card:
 - Click **Edit goal** to modify the objective, criteria, or guidance
 - Click **Stop goal** to cancel the goal entirely
 
-Stopping a goal does not undo the files the agent already created — those remain in the workspace.
+Stopping a goal does not undo the files the agent already created — those remain on the agent's computer in the workspace.
 
 ## When to use goal mode
 
-Goal mode is best for tasks that require multiple rounds of work:
+Goal mode is best for work that requires multiple rounds of autonomous effort:
 
-- Writing a multi-section research paper
-- Building a complete application with iteration
-- Performing a literature review that requires searching, reading, and synthesizing
-- Generating a dataset with validation and cleanup steps
+- **Literature reviews** — searching, screening, synthesizing, and writing across dozens of sources
+- **Data analysis pipelines** — inspecting datasets, writing analysis code, generating visualizations, summarizing findings
+- **Technical writing** — drafting multi-section papers, grant proposals, or reports with citations
+- **Application building** — creating a complete website or tool with multiple components and iteration
+- **Dataset generation** — collecting, cleaning, validating, and formatting data from multiple sources
 
-For quick one-off tasks, a regular message is usually faster and simpler.
+For quick one-off tasks (a single question, a short code snippet, a quick edit), a regular message is usually faster and simpler.
+
+## What makes this different from a chat prompt
+
+When you set a goal, the agent operates more like an autonomous researcher than a conversational assistant:
+
+- It **plans** the work before starting
+- It **executes multiple steps** without waiting for your input
+- It **checks its own work** against the acceptance criteria
+- It **iterates** if the result isn't good enough
+- It **produces files** on its dedicated computer, not just text in chat
+
+The result is a workspace full of finished deliverables, not a long conversation thread.
